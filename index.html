@@ -1,203 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>BYH Casas Modulares</title>
+    <title>BYH Casas Modulares</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="nav container">
+        <div class="logo">BYH</div>
 
-<header>
-  <div class="nav container">
+        <!-- BURGER -->
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-    <div class="logo">BYH</div>
+        <!-- MENU -->
+        <nav id="navMenu">
+          <a href="#hero">Início</a>
+          <a href="#why">Porquê nós</a>
+          <a href="#catalog">Catálogo</a>
+          <a href="#process">Processo</a>
+          <a href="#contacts">Contactos</a>
+        </nav>
+      </div>
+    </header>
 
-    <!-- BURGER -->
-    <div class="burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Casas modulares chave na mão</h1>
+          <p>Casa pronta em 60 dias</p>
+          <button class="btn-primary">Consulta</button>
+        </div>
+      </div>
+    </section>
 
-    <!-- MENU -->
-    <nav id="navMenu">
-      <a href="#hero">Início</a>
-      <a href="#why">Porquê nós</a>
-      <a href="#catalog">Catálogo</a>
-      <a href="#process">Processo</a>
-      <a href="#contacts">Contactos</a>
-    </nav>
+    <!-- WHY -->
+    <section id="why" class="section hidden-section">
+      <div class="container center">
+        <h2>Porquê nós?</h2>
+        <div class="grid grid-4 why-cards">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+            />
+            <h3>Construção em 60 dias</h3>
+            <p>Produzimos e instalamos a sua casa modular em apenas 60 dias.</p>
+          </div>
 
-  </div>
-</header>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
+            />
+            <h3>Produção própria</h3>
+            <p>
+              Fabricamos estruturas metálicas internamente para máximo controlo
+              de qualidade.
+            </p>
+          </div>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Casas modulares chave na mão</h1>
-      <p>Casa pronta em 60 dias</p>
-      <button class="btn-primary">Consulta</button>
-    </div>
-  </div>
-</section>
+          <div class="card">
+            <img
+              src="https://doisfcs.com/wp-content/uploads/2018/11/LSF-Light-Steel-Framing-destaque.jpg"
+            />
+            <h3>Eficiência energética</h3>
+            <p>Utilizamos apenas materiais modernos e altamente eficientes.</p>
+          </div>
 
-<!-- WHY -->
-<section id="why" class="section hidden-section">
-  <div class="container center">
-    <h2>Porquê nós?</h2>
-    <div class="grid grid-4">
-      <div class="card">⚡ Rápido</div>
-      <div class="card">🏗 Qualidade</div>
-      <div class="card">💡 Eficiência energética</div>
-      <div class="card">🛡 Garantia</div>
-    </div>
-  </div>
-</section>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216"
+            />
+            <h3>Garantia 30 anos</h3>
+            <p>Oferecemos garantia de até 30 anos em todas as nossas casas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- CATALOG -->
-<section id="catalog" class="section bg-light hidden-section">
-  <div class="container center">
-    <h2>Catálogo</h2>
+    <!-- CATALOG -->
+    <section id="catalog" class="section bg-light hidden-section">
+      <div class="container center">
+        <h2>Catálogo</h2>
 
-    <div class="grid grid-3">
-
-      <div class="card" data-images="
+        <div class="grid grid-3">
+          <div
+            class="card"
+            data-images="
 https://images.unsplash.com/photo-1600585154340-be6161a56a0c,
 https://images.unsplash.com/photo-1600607686527-6fb886090705,
 https://images.unsplash.com/photo-1505691938895-1758d7feb511
-">
-  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-  <div class="card-text">Casa 60 • Compact living</div>
-</div>
+"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+            />
+            <div class="card-text">Casa 60 • Compact living</div>
+          </div>
 
-<div class="card" data-images="
+          <div
+            class="card"
+            data-images="
 https://images.unsplash.com/photo-1512917774080-9991f1c4c750,
 https://images.unsplash.com/photo-1507089947368-19c1da9775ae,
 https://images.unsplash.com/photo-1493809842364-78817add7ffb
-">
-  <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
-  <div class="card-text">Casa 80 • Family home</div>
-</div>
+"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+            />
+            <div class="card-text">Casa 80 • Family home</div>
+          </div>
 
-<div class="card" data-images="
+          <div
+            class="card"
+            data-images="
 https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6,
 https://images.unsplash.com/photo-1600585154526-990dced4db0d,
 https://images.unsplash.com/photo-1484154218962-a197022b5858
-">
-  <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6">
-  <div class="card-text">Casa 120 • Modern design</div>
-</div>
+"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6"
+            />
+            <div class="card-text">Casa 120 • Modern design</div>
+          </div>
 
-<div class="card" data-images="
+          <div
+            class="card"
+            data-images="
 https://images.unsplash.com/photo-1600585154526-990dced4db0d,
 https://images.unsplash.com/photo-1564013799919-ab600027ffc6,
 https://images.unsplash.com/photo-1570129477492-45c003edd2be
-">
-  <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
-  <div class="card-text">Casa 140 • Premium space</div>
-</div>
+"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d"
+            />
+            <div class="card-text">Casa 140 • Premium space</div>
+          </div>
 
-<div class="card" data-images="
+          <div
+            class="card"
+            data-images="
 https://images.unsplash.com/photo-1564013799919-ab600027ffc6,
 https://images.unsplash.com/photo-1600607687920-4e2a09cf159d,
 https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3
-">
-  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
-  <div class="card-text">Casa 160 • Luxury living</div>
-</div>
+"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+            />
+            <div class="card-text">Casa 160 • Luxury living</div>
+          </div>
 
-<div class="card" data-images="
+          <div
+            class="card"
+            data-images="
 https://images.unsplash.com/photo-1570129477492-45c003edd2be,
 https://images.unsplash.com/photo-1600585154208-6e7c62a1b3e3,
 https://images.unsplash.com/photo-1600607687644-c7171b42498c
-">
-  <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-  <div class="card-text">Casa 200 • Ultra premium</div>
-</div>
+"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1570129477492-45c003edd2be"
+            />
+            <div class="card-text">Casa 200 • Ultra premium</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- PROCESS -->
+    <section id="process" class="section hidden-section">
+      <div class="container center">
+        <h2>Como trabalhamos</h2>
+        <div class="grid grid-5">
+          <div class="card">Pedido</div>
+          <div class="card">Consulta</div>
+          <div class="card">Projeto</div>
+          <div class="card">Produção</div>
+          <div class="card">Instalação</div>
+        </div>
+      </div>
+    </section>
 
-<!-- PROCESS -->
-<section id="process" class="section hidden-section">
-  <div class="container center">
-    <h2>Como trabalhamos</h2>
-    <div class="grid grid-5">
-      <div class="card">Pedido</div>
-      <div class="card">Consulta</div>
-      <div class="card">Projeto</div>
-      <div class="card">Produção</div>
-      <div class="card">Instalação</div>
-    </div>
-  </div>
-</section>
+    <!-- CONTACTS -->
+    <section id="contacts" class="section bg-light hidden-section">
+      <div class="container center">
+        <h2>Contactos</h2>
+        <p>+380 00 000 00 00</p>
+      </div>
+    </section>
 
-<!-- CONTACTS -->
-<section id="contacts" class="section bg-light hidden-section">
-  <div class="container center">
-    <h2>Contactos</h2>
-    <p>+380 00 000 00 00</p>
-  </div>
-</section>
+    <footer class="footer">
+      <div class="footer-grid container">
+        <div>
+          <h3>BYH</h3>
+          <p>Casas modulares modernas</p>
+        </div>
 
-<footer class="footer">
-  <div class="footer-grid container">
-    <div>
-      <h3>BYH</h3>
-      <p>Casas modulares modernas</p>
-    </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#catalog">Catálogo</a></li>
+            <li><a href="#process">Processo</a></li>
+          </ul>
+        </div>
 
-    <div>
-      <h4>Navegação</h4>
-      <ul>
-        <li><a href="#catalog">Catálogo</a></li>
-        <li><a href="#process">Processo</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <button class="btn-primary">Consulta</button>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 BYH Casas Modulares
-  </div>
-</footer>
-
-<!-- Modal window -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-
-    <span class="close" id="closeModal">&times;</span>
-
-    <div class="slider">
-      <button class="prev">&#10094;</button>
-
-      <div class="slides" id="slides">
-        <!-- картинки вставляються через JS -->
+        <div>
+          <button class="btn-primary">Consulta</button>
+        </div>
       </div>
 
-      <button class="next">&#10095;</button>
+      <div class="footer-bottom">© 2026 BYH Casas Modulares</div>
+    </footer>
+
+    <!-- Modal window -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+
+        <div class="slider">
+          <button class="prev">&#10094;</button>
+
+          <div class="slides" id="slides">
+            <!-- картинки вставляються через JS -->
+          </div>
+
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
     </div>
 
-  </div>
-</div>
-
-<script src="script/scroll.js"></script>
-<script src="script/burger.js"></script>
-<script src="script/modal.js"></script>
-
-
-
-</body>
+    <script src="script/scroll.js"></script>
+    <script src="script/burger.js"></script>
+    <script src="script/modal.js"></script>
+  </body>
 </html>

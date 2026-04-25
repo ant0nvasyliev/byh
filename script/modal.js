@@ -8,17 +8,16 @@ const next = document.querySelector(".next");
 let currentIndex = 0;
 
 // 🔥 OPEN CARD -> BUILD SLIDER
-document.querySelectorAll(".card").forEach(card => {
+document.querySelectorAll(".card").forEach((card) => {
   card.addEventListener("click", () => {
-
     const images = card.dataset.images
       .split(",")
-      .map(img => img.trim())
-      .filter(img => img !== "");
+      .map((img) => img.trim())
+      .filter((img) => img !== "");
 
     slidesContainer.innerHTML = "";
 
-    images.forEach(src => {
+    images.forEach((src) => {
       const wrapper = document.createElement("div");
       wrapper.style.minWidth = "100%";
       wrapper.style.height = "100%";
@@ -66,9 +65,36 @@ next.addEventListener("click", () => {
   updateSlider();
 });
 
-
 prev.addEventListener("click", () => {
   const total = slidesContainer.children.length;
   currentIndex = (currentIndex - 1 + total) % total;
+  updateSlider();
+});
+
+let startX = 0;
+let endX = 0;
+
+slidesContainer.addEventListener("touchstart", (e) => {
+  startX = e.changedTouches[0].clientX;
+});
+
+slidesContainer.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+
+  const diff = startX - endX;
+
+  // мінімальна чутливість
+  if (Math.abs(diff) < 50) return;
+
+  const total = slidesContainer.children.length;
+
+  if (diff > 0) {
+    // swipe left → next
+    currentIndex = (currentIndex + 1) % total;
+  } else {
+    // swipe right → prev
+    currentIndex = (currentIndex - 1 + total) % total;
+  }
+
   updateSlider();
 });
