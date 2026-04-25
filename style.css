@@ -108,16 +108,24 @@ nav {
 ========================= */
 
 .section {
-  min-height: auto;
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  padding: 50px 16px;
+  padding: 50px 0; /* прибрали бокові, тепер контейнер керує */
 }
 
 .container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .center {
@@ -146,6 +154,8 @@ nav {
   border-radius: 14px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   transition: 0.3s;
+  cursor: pointer; /* 🔥 pointer */
+  overflow: hidden;
 }
 
 .card:hover {
@@ -154,8 +164,15 @@ nav {
 
 .card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  height: 180px;      /* 🔥 фіксована висота */
+  object-fit: cover;  /* щоб не спотворювалось */
+  display: block;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
 }
 
 /* BACKGROUND */
@@ -211,6 +228,38 @@ nav {
   nav {
     display: block;
   }
+
+  nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav a:hover {
+  background: rgba(31, 122, 99, 0.1);
+  color: var(--primary);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: 0.3s;
+  transform-origin: center;
+}
 
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
@@ -336,3 +385,74 @@ nav.active {
     gap: 15px;
   }
 }
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 800px;
+  height: 500px; /* фіксована висота */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* SLIDER */
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 🔥 ОЦЕ ГОЛОВНЕ */
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.slides img {
+  min-width: 100%;   /* 🔥 ключове */
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ARROWS */
+.prev, .next {
+  z-index: 10; /* 🔥 щоб було поверх картинок */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }

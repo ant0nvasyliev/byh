@@ -40,10 +40,12 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-content">
-    <h1>Casas modulares chave na mão</h1>
-    <p>Casa pronta em 60 dias</p>
-    <button class="btn-primary">Consulta</button>
+  <div class="container">
+    <div class="hero-content">
+      <h1>Casas modulares chave na mão</h1>
+      <p>Casa pronta em 60 dias</p>
+      <button class="btn-primary">Consulta</button>
+    </div>
   </div>
 </section>
 
@@ -64,19 +66,63 @@
 <section id="catalog" class="section bg-light hidden-section">
   <div class="container center">
     <h2>Catálogo</h2>
+
     <div class="grid grid-3">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-        Casa 60
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705">
-        Casa 80
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
-        Casa 120
-      </div>
+
+      <div class="card" data-images="
+https://images.unsplash.com/photo-1600585154340-be6161a56a0c,
+https://images.unsplash.com/photo-1600607686527-6fb886090705,
+https://images.unsplash.com/photo-1505691938895-1758d7feb511
+">
+  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+  <div class="card-text">Casa 60 • Compact living</div>
+</div>
+
+<div class="card" data-images="
+https://images.unsplash.com/photo-1512917774080-9991f1c4c750,
+https://images.unsplash.com/photo-1507089947368-19c1da9775ae,
+https://images.unsplash.com/photo-1493809842364-78817add7ffb
+">
+  <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+  <div class="card-text">Casa 80 • Family home</div>
+</div>
+
+<div class="card" data-images="
+https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6,
+https://images.unsplash.com/photo-1600585154526-990dced4db0d,
+https://images.unsplash.com/photo-1484154218962-a197022b5858
+">
+  <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6">
+  <div class="card-text">Casa 120 • Modern design</div>
+</div>
+
+<div class="card" data-images="
+https://images.unsplash.com/photo-1600585154526-990dced4db0d,
+https://images.unsplash.com/photo-1564013799919-ab600027ffc6,
+https://images.unsplash.com/photo-1570129477492-45c003edd2be
+">
+  <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+  <div class="card-text">Casa 140 • Premium space</div>
+</div>
+
+<div class="card" data-images="
+https://images.unsplash.com/photo-1564013799919-ab600027ffc6,
+https://images.unsplash.com/photo-1600607687920-4e2a09cf159d,
+https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3
+">
+  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
+  <div class="card-text">Casa 160 • Luxury living</div>
+</div>
+
+<div class="card" data-images="
+https://images.unsplash.com/photo-1570129477492-45c003edd2be,
+https://images.unsplash.com/photo-1600585154208-6e7c62a1b3e3,
+https://images.unsplash.com/photo-1600607687644-c7171b42498c
+">
+  <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+  <div class="card-text">Casa 200 • Ultra premium</div>
+</div>
+
     </div>
   </div>
 </section>
@@ -128,8 +174,29 @@
   </div>
 </footer>
 
+<!-- Modal window -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+
+    <span class="close" id="closeModal">&times;</span>
+
+    <div class="slider">
+      <button class="prev">&#10094;</button>
+
+      <div class="slides" id="slides">
+        <!-- картинки вставляються через JS -->
+      </div>
+
+      <button class="next">&#10095;</button>
+    </div>
+
+  </div>
+</div>
+
 <script src="script/scroll.js"></script>
 <script src="script/burger.js"></script>
+<script src="script/modal.js"></script>
+
 
 
 </body>
