@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("contactModal");
   const openModalBtn = document.getElementById("openContactModal");
-  const closeModalBtn = document.querySelector(".close");
+  const closeModalBtn = modal.querySelector(".close");
   const modalContent = document.querySelector(".modal-content");
 
   // Перевірка наявності елементів

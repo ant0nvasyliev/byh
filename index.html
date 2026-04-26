@@ -189,12 +189,42 @@ https://images.unsplash.com/photo-1600607687644-c7171b42498c
     <section id="process" class="section hidden-section">
       <div class="container center">
         <h2>Como trabalhamos</h2>
+
         <div class="grid grid-5">
-          <div class="card">Pedido</div>
-          <div class="card">Consulta</div>
-          <div class="card">Projeto</div>
-          <div class="card">Produção</div>
-          <div class="card">Instalação</div>
+          <div class="card process-card">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=60"
+            />
+            <div class="card-text">Pedido</div>
+          </div>
+
+          <div class="card process-card">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=60"
+            />
+            <div class="card-text">Consulta</div>
+          </div>
+
+          <div class="card process-card">
+            <img
+              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=60"
+            />
+            <div class="card-text">Projeto</div>
+          </div>
+
+          <div class="card process-card">
+            <img
+              src="https://images.unsplash.com/photo-1581091012184-7c3a1a6f0c9f?auto=format&fit=crop&w=800&q=60"
+            />
+            <div class="card-text">Produção</div>
+          </div>
+
+          <div class="card process-card">
+            <img
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=60"
+            />
+            <div class="card-text">Instalação</div>
+          </div>
         </div>
       </div>
     </section>
@@ -237,26 +267,40 @@ https://images.unsplash.com/photo-1600607687644-c7171b42498c
     </section>
 
     <footer class="footer">
-      <div class="footer-grid container">
-        <div>
+      <div class="container footer-grid">
+        <div class="footer-brand">
           <h3>BYH</h3>
-          <p>Casas modulares modernas</p>
+          <p>
+            Casas modulares modernas com qualidade premium e entrega rápida.
+          </p>
         </div>
 
-        <div>
+        <div class="footer-links">
           <h4>Navegação</h4>
           <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#why">Porquê nós</a></li>
             <li><a href="#catalog">Catálogo</a></li>
             <li><a href="#process">Processo</a></li>
           </ul>
         </div>
 
-        <div>
-          <button class="btn-primary">Consulta</button>
+        <div class="footer-contact">
+          <h4>Contactos</h4>
+          <p>📞 +351 912 345 678</p>
+          <p>✉️ info@mestredopladur.com</p>
+          <p>📍 Lisboa, Portugal</p>
+        </div>
+
+        <div class="footer-cta">
+          <h4>Pronto para começar?</h4>
+          <button class="btn-primary">Consulta gratuita</button>
         </div>
       </div>
 
-      <div class="footer-bottom">© 2026 BYH Casas Modulares</div>
+      <div class="footer-bottom">
+        © 2026 BYH Casas Modulares • Todos os direitos reservados
+      </div>
     </footer>
 
     <!-- Modal window -->
@@ -281,7 +325,7 @@ https://images.unsplash.com/photo-1600607687644-c7171b42498c
       <div class="modal-content">
         <div class="modal-header">
           <h3>Escreva-nos</h3>
-          <span class="close">&times;</span>
+          <span class="close" id="closeModal">&times;</span>
         </div>
         <form
           id="contactForm"
