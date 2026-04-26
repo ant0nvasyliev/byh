@@ -33,7 +33,7 @@
           <a href="#why">Porquê nós</a>
           <a href="#catalog">Catálogo</a>
           <a href="#process">Processo</a>
-          <a href="#contacts">Contactos</a>
+          <a href="#contact">Contactos</a>
         </nav>
       </div>
     </header>
@@ -200,10 +200,39 @@ https://images.unsplash.com/photo-1600607687644-c7171b42498c
     </section>
 
     <!-- CONTACTS -->
-    <section id="contacts" class="section bg-light hidden-section">
-      <div class="container center">
+    <section id="contact" class="section contact">
+      <div class="container">
         <h2>Contactos</h2>
-        <p>+380 00 000 00 00</p>
+        <p>
+          Contacte-nos para uma consulta gratuita e cálculo do custo dos
+          trabalhos
+        </p>
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <h3>Telefone</h3>
+            <p>+351 912 345 678</p>
+            <a href="https://wa.me/351912052104" class="btn">WhatsApp</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>info@mestredopladur.com</p>
+            <button class="btn" id="openContactModal">Escrever</button>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Morada</h3>
+            <p>Rua da Construção, 25, Lisboa</p>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Rua%20da%20Construção%2C%2025%2C%20Lisboa"
+              target="_blank"
+              class="btn"
+              >Abrir no mapa</a
+            >
+          </div>
+        </div>
       </div>
     </section>
 
@@ -247,8 +276,65 @@ https://images.unsplash.com/photo-1600607687644-c7171b42498c
       </div>
     </div>
 
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Escreva-nos</h3>
+          <span class="close">&times;</span>
+        </div>
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="https://formspree.io/f/mqaykayn"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="Novo pedido do site Mestre do Pladur"
+          />
+          <input type="hidden" name="_language" value="pt" />
+
+          <div class="form-group">
+            <label for="name">Nome *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Número de telefone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+351 ___ ___ ___"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Descreva a sua questão em detalhe..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn">Enviar mensagem</button>
+        </form>
+      </div>
+    </div>
+
     <script src="script/scroll.js"></script>
     <script src="script/burger.js"></script>
     <script src="script/modal.js"></script>
+    <script src="script/contact_modal.js"></script>
   </body>
 </html>
