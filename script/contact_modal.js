@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("contactModal");
   const openModalBtn = document.getElementById("openContactModal");
   const closeModalBtn = modal.querySelector(".close");
-  const modalContent = document.querySelector(".modal-content");
+  const modalContent = modal.querySelector(".modal-content");
 
   // Перевірка наявності елементів
   if (!modal || !openModalBtn || !closeModalBtn || !modalContent) {
@@ -36,14 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функція закриття модального вікна
   function closeModal() {
-    modal.style.display = "none";
+    modal.classList.remove("active");
     enableBodyScroll();
     isModalOpen = false;
   }
-
   // Функція відкриття модального вікна
   function openModal() {
-    modal.style.display = "block";
+    modal.classList.add("active");
     disableBodyScroll();
     isModalOpen = true;
 
